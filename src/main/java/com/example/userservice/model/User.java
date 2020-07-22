@@ -1,5 +1,6 @@
 package com.example.userservice.model;
 
+import com.example.userservice.validator.EmailValidate;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,5 +28,6 @@ public class User {
                inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
     private List<Role>roles;
 
+    @EmailValidate
     private String email;
 }
